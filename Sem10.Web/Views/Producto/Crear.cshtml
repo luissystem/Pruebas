@@ -1,0 +1,49 @@
+﻿@model Sem10.Entitities.Models.Producto
+
+<h1>Crear Producto</h1>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6 col-md-offset-4">
+
+
+
+            <form action="/producto/guardar" method="post">
+
+                <div class="form-group">
+                    <label for="" class="control-label">Código</label>
+                    @Html.TextBoxFor(o => o.Codigo, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(o => o.Codigo)
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="control-label">Categoria</label>
+                    @Html.TextBoxFor(o => o.CategoriaId, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(o => o.CategoriaId)
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="control-label">Nombre</label>
+                    @Html.TextBoxFor(o => o.Nombre, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(o => o.Nombre)
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="control-label">Precio</label>
+                    @Html.TextBoxFor(o => o.Precio, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(o => o.Precio)
+                </div>
+
+                <button class="btn btn-primary">Guardar</button>  
+
+
+            </form>
+
+
+        </div>    
+
+
+    </div>
+</div>
+
+

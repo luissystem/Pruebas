@@ -1,0 +1,29 @@
+﻿
+<h1>Productos</h1>
+
+<a href="/producto/crear" class="btn btn-default pull-right">Crear</a>
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Categoria</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                { 
+                    <tr>
+                        <td>@item.Codigo</td>
+                        <td>@item.CategoriaId</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Precio</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
